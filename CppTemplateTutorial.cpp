@@ -7,19 +7,19 @@
 // 0. Basic Form
 namespace _0
 {
-	template <typename T> // Old fasion: template <class T>
-	class ClassA
+	template <typename T> // Old fasion: template <class T>				//模板参数列表
+	class ClassA														//类名称
 	{
-		T	a;
-		T*	b;
-		T foo();
-		void foo2(T const&);
+		T	a;															//以模板参数类型的成员
+		T*	b;															//以模板参数类型的指针成员
+		T foo();														//返回模板参数类型的成员函数
+		void foo2(T const&);											//以模板参数作为成员函数的引用型参数
 	};
 
-	template <int Sz>
-	class ClassB
+	template <int Sz>													//模板参数列表--包含的是特化的类型 [指定了int类型]
+	class ClassB														//类名称
 	{
-		int arr[Sz];
+		int arr[Sz];													//以指定的参数类型作为成员的大小
 	};
 
 	size_t a = sizeof(ClassB<3>);
